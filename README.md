@@ -1,6 +1,6 @@
 # Brown Dwarf Candidate Selection in the JWST COSMOS-Web Field
 
-This repository contains the code used to identify brown dwarf candidates in the JWST COSMOS-Web survey using infrared colour–colour selection. The analysis follows the methodology presented in Chen et al. (2025) and reproduces a colour–colour diagram similar to Figure 2 of the paper.
+This repository contains the code used to identify brown dwarf candidates in the JWST COSMOS-Web survey using infrared colour–colour selection. The analysis follows the methodology presented in Chen et al. (2025) and reproduces a colour-colour diagram similar to Figure 2 of the paper.
 
 ---
 
