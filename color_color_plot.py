@@ -1,6 +1,6 @@
 
 # JWST COSMOS-Web color–color diagram
-# Figure 2 style (paper-faithful)
+# Figure 2 style
 
 
 from astropy.io import fits
@@ -9,8 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-# Global plot style (journal-like)
-
+# Global plot style
 plt.rcParams.update({
     "font.size": 11,
     "axes.linewidth": 1.0,
@@ -60,7 +59,7 @@ x = f277 - f444
 y = f115 - f277
 
 
-# Brown dwarf colour selection (paper cuts)
+# Brown dwarf colour selection
 
 bd_mask = (x > 0.9) & (y + 1.0 < x)
 
@@ -80,12 +79,12 @@ Table(data_clean[bd_mask]).write(
 fig, ax = plt.subplots(figsize=(5.8, 5.8))
 
 
-# Background: very fine hexagonal density (paper-like)
+
 
 hb = ax.hexbin(
     x,
     y,
-    gridsize=170,        # slightly finer than before
+    gridsize=170,        
     bins="log",
     cmap="Greys",
     mincnt=1,
@@ -94,12 +93,11 @@ hb = ax.hexbin(
 )
 
 
-# Brown dwarf candidates (KEEP white outline)
 
 ax.scatter(
     x[bd_mask],
     y[bd_mask],
-    s=20,               # slightly reduced for zoomed-out look
+    s=20,               
     marker="o",
     color="#d62728",
     edgecolor="white",
@@ -131,7 +129,7 @@ ax.plot(
 )
 
 
-# Axes, limits, labels (SLIGHT ZOOM OUT)
+# Axes, limits, labels 
 
 ax.set_xlabel("F277W − F444W (AB mag)")
 ax.set_ylabel("F115W − F277W (AB mag)")
@@ -142,7 +140,7 @@ ax.set_ylim(-3.2, 1.1)     # slight zoom-out
 ax.grid(False)
 
 
-# Legend (paper-style grey box)
+# Legend 
 
 leg = ax.legend(
     loc="upper right",
@@ -158,7 +156,7 @@ leg.get_frame().set_linewidth(0.8)
 leg.get_frame().set_alpha(0.95)
 
 
-# Caption (wrapped, compact)
+# Caption 
 
 fig.text(
     0.5, -0.15,
@@ -180,3 +178,4 @@ plt.savefig(
     bbox_inches="tight"
 )
 plt.close()
+
