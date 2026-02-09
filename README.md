@@ -49,5 +49,5 @@ Applying the colour selection to the full COSMOS-Web catalogue yields **4676 col
 ├── data/raw/        # COSMOS-Web catalogue (not included)
 ├── figures/         # Output figure
 ├── output/          # Candidate catalogue
-├── make_color_color_plot.py
+├── color_color_plot.py
 └── README.md
